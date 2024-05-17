@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/content/dam/webappeenadu">
+        <!-- Exclude folder thumbnails - they will be generated automatically -->
+        <exclude pattern="^.*/jcr:content/folderThumbnail(/.*)?$"/>
+    </filter>
+    <filter root="/content/webappeenadu"/>
+    <filter root="/content/experience-fragments/webappeenadu"/>
+    <filter root="/conf/webappeenadu">
+        <include pattern="/conf/webappeenadu/.*"/>
+        <exclude pattern="/conf/webappeenadu/rep:policy(/.*)?"/>
+        <exclude pattern="/conf/webappeenadu/settings/wcm(/.*)?"/>
+    </filter>
+</workspaceFilter>

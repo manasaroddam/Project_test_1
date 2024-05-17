@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Teaser",
+  "componentGroup": "webappeenadu Content",
+  "imageDelegate": "webappeenadu/core/components/core-components/content/image",
+  "sling:resourceSuperType": "core/wcm/components/teaser/v2/teaser"
+}

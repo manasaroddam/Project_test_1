@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Accordion",
+  "componentGroup": "webappeenadu Container",
+  "sling:resourceSuperType": "core/wcm/components/accordion/v1/accordion"
+}

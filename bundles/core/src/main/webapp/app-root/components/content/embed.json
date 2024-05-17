@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Embed",
+  "componentGroup": "webappeenadu Content",
+  "sling:resourceSuperType": "core/wcm/components/embed/v2/embed"
+}

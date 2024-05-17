@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Form Options",
+  "componentGroup": "webappeenadu Form",
+  "sling:resourceSuperType": "core/wcm/components/form/options/v2/options"
+}

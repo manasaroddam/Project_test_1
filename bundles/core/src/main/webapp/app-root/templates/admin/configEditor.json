@@ -1,0 +1,13 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "webappeenadu Configuration Editor",
+  "ranking": 120,
+
+  "allowedPaths": "^/content/webappeenadu(/.+)*/tools(/.+)?$",
+  "allowedChildren": "",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "webappeenadu/core/components/admin/page/configEditor"
+  }
+}

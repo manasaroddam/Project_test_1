@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Breadcrumb",
+  "componentGroup": "webappeenadu Templating",
+  "sling:resourceSuperType": "core/wcm/components/breadcrumb/v3/breadcrumb"
+}

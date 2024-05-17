@@ -1,0 +1,73 @@
+{
+  "configurations": {
+
+    // Set loglevel for project-specific bundles
+    "org.apache.sling.commons.log.LogManager.factory.config-webappeenadu": {
+      "org.apache.sling.commons.log.file": "logs/error.log",
+      "org.apache.sling.commons.log.level": "{{app.logLevel}}",
+      "org.apache.sling.commons.log.names": ["io.wcm","webappeenadu"]
+    },
+
+    // Disable built-in AEM link checker by default (enable it only when configured properly).
+    "com.day.cq.rewriter.linkchecker.impl.LinkCheckerTransformerFactory": {
+      "linkcheckertransformer.disableChecking": true
+    },
+
+    // Context path strategy
+    "io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy-webappeenadu": {
+      "templatePaths": ["/conf/webappeenadu/settings/wcm/templates/homepage"],
+      "minLevel": 1,
+      "maxLevel": 5,
+      "contextPathRegex": "^/content/(dam/)?(webappeenadu/.*)?$",
+      "configPathPatterns": ["/conf/$2"]
+    },
+
+    // Store context-aware configuration in cq:Page nodes in /conf
+    "io.wcm.caconfig.extensions.persistence.impl.PagePersistenceStrategy": {
+      "enabled": true
+    },
+
+  },
+
+  "configurations:author": {
+
+    // Show "Sites" view in TouchUI after login
+    "com.day.cq.commons.servlets.RootMappingServlet": {
+      "rootmapping.target": "/sites.html"
+    },
+
+{{#if aem.disableAuthorUsageStatisticsCollection ~}}
+    // Disable usage tracking by default for admins (esp. for local usage)
+    "com.adobe.cq.experiencelog.impl.ExperienceLogConfigServlet": {
+      "enabled": false
+    },
+
+{{/if ~}}
+  },
+
+  "configurations:publish": {
+
+    // Disable Configuration Editor on publish
+    "io.wcm.caconfig.editor.impl.EditorConfig": {
+      "enabled": false
+    },
+
+    // Disable default renderings for Sling GET servlet on publish
+    "org.apache.sling.servlets.get.DefaultGetServlet": {
+      "enable.html": "false",
+      "enable.json": "true",
+      "enable.txt": "false",
+      "enable.xml": "false",
+      "index": "false",
+      "index.files": ["index","index.html"],
+      "aliases": "xml:pdf",
+      "json.maximumresults": 100
+    },
+
+  },
+
+  "repoinit": [
+    // Create root folder below /apps for application
+    "create path /apps/webappeenadu(sling:Folder)"
+  ]
+}

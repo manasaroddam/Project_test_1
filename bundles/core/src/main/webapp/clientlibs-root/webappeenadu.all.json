@@ -1,0 +1,21 @@
+{
+  "jcr:primaryType": "cq:ClientLibraryFolder",
+  "categories": [
+    "webappeenadu.all"
+  ],
+  "embed": [
+    "core.wcm.components.commons.datalayer.v1",
+    "core.wcm.components.commons.site.container",
+    "core.wcm.components.image.v2",
+    "core.wcm.components.carousel.v1",
+    "core.wcm.components.tabs.v1",
+    "core.wcm.components.accordion.v1",
+    "webappeenadu.3rdparty",
+    "webappeenadu.app"
+  ],
+  "jsProcessor": [
+    "default:none",
+    "min:gcc;compilationLevel=whitespace"
+  ],
+  "allowProxy": true
+}

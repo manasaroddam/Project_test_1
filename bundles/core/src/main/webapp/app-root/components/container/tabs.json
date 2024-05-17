@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Tabs",
+  "componentGroup": "webappeenadu Container",
+  "sling:resourceSuperType": "core/wcm/components/tabs/v1/tabs"
+}

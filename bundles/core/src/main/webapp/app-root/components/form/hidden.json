@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Form Hidden",
+  "componentGroup": "webappeenadu Form",
+  "sling:resourceSuperType": "core/wcm/components/form/hidden/v2/hidden"
+}

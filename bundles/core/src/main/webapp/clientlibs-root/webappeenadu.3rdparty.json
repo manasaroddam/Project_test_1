@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "cq:ClientLibraryFolder",
+  "categories": [
+    "webappeenadu.3rdparty"
+  ],
+  "allowProxy": true
+}

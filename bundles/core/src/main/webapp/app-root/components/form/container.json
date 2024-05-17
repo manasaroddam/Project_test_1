@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Form Container",
+  "componentGroup": "webappeenadu Form",
+  "sling:resourceSuperType": "core/wcm/components/form/container/v2/container"
+}

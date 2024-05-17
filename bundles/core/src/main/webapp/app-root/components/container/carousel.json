@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Carousel",
+  "componentGroup": "webappeenadu Container",
+  "sling:resourceSuperType": "core/wcm/components/carousel/v1/carousel"
+}

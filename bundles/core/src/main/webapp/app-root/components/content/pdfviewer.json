@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "PDF Viewer",
+  "componentGroup": "webappeenadu Content",
+  "sling:resourceSuperType": "core/wcm/components/pdfviewer/v1/pdfviewer"
+}

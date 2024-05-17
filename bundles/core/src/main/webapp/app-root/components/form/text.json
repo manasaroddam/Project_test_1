@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Form Text",
+  "componentGroup": "webappeenadu Form",
+  "sling:resourceSuperType": "core/wcm/components/form/text/v2/text"
+}

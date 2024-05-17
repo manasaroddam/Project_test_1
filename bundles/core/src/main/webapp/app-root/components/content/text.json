@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Text",
+  "componentGroup": "webappeenadu Content",
+  "sling:resourceSuperType": "core/wcm/components/text/v2/text"
+}

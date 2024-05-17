@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Form Button",
+  "componentGroup": "webappeenadu Form",
+  "sling:resourceSuperType": "core/wcm/components/form/button/v2/button"
+}

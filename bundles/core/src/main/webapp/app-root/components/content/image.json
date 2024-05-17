@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Image",
+  "componentGroup": "webappeenadu Content",
+  "sling:resourceSuperType": "core/wcm/components/image/v3/image"
+}

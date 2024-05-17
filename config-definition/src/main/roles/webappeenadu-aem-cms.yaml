@@ -1,0 +1,75 @@
+# Project-specific AEM configuration
+
+# Inherit default AEM functionality from "AEM Definitions", see http://devops.wcm.io/conga/definitions/aem/
+inherits:
+- role: aem-cms
+
+variants:
+- variant: aem-author
+- variant: aem-publish
+
+templateDir: webappeenadu-aem-cms
+
+files:
+
+
+# AEM OSGi System Configuration
+- file: webappeenadu-aem-cms-config.osgiconfig.json
+  dir: packages
+  template: webappeenadu-aem-cms-config.osgiconfig.json.hbs
+  validators:
+  - none  # allow trailing commas in JSON picked up by post processor
+  postProcessors:
+  - aem-contentpackage-osgiconfig
+  postProcessorOptions:
+    contentPackage:
+      name: webappeenadu-aem-cms-config
+      rootPath: /apps/webappeenadu/config
+      filters:
+      - filter: /apps/webappeenadu
+        rules:
+        - rule: include
+          pattern: /apps/webappeenadu/config(\..*)?(/.*)?
+        - rule: exclude
+          pattern: /apps/webappeenadu/config/rewriter(/.*)?
+
+# wcm.io
+- url: mvn:io.wcm/io.wcm.caconfig.extensions
+  dir: bundles
+- url: mvn:io.wcm/io.wcm.caconfig.editor
+  dir: bundles
+- url: mvn:io.wcm/io.wcm.sling.commons
+  dir: bundles
+
+# Application bundles andpackages
+- url: mvn:com.eenadu/webappeenadu.core
+  dir: bundles
+
+# Application conf content package
+- url: mvn:com.eenadu/webappeenadu.conf-content//zip
+  dir: packages
+  condition: ${app.confContent}
+
+# Application sample content package
+- url: mvn:com.eenadu/webappeenadu.sample-content//zip
+  dir: packages
+  condition: ${app.sampleContent}
+
+
+# Defines configuration parameters and default values
+config:
+  contentPackage:
+    group: webappeenadu
+    version: ${version}
+
+  aem:
+    # Disable user tracking in author environment
+    disableAuthorUsageStatisticsCollection: false
+
+  app:
+    confContent: true
+    sampleContent: false
+
+  # Log levels
+  log:
+    projectSpecificLogLevel: warn

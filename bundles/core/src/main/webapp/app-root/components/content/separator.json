@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Separator",
+  "componentGroup": "webappeenadu Content",
+  "sling:resourceSuperType": "core/wcm/components/separator/v1/separator"
+}

@@ -1,0 +1,13 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "webappeenadu Structure Element",
+  "ranking": 100,
+
+  "allowedPaths": "^/content/webappeenadu(/.+)?$",
+  "allowedChildren": ["^/apps/webappeenadu/core/templates/.*$","^/conf/webappeenadu/settings/wcm/templates/.*$"],
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "webappeenadu/core/components/admin/page/structureElement"
+  }
+}
